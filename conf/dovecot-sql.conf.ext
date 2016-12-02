@@ -1,0 +1,5 @@
+driver = mysql
+connect = host=mysql dbname=postfixadmin user=postfixadmin password={{ MYSQLPASSWORD }}
+default_pass_scheme = cleartext
+password_query = SELECT username, password FROM mailbox WHERE username='%u'
+user_query = user_query = SELECT concat("/var/mail/vhosts/", "%d", "/", "%n") as home, 5000 as uid, 5000 as gid FROM virtual_usual_users WHERE email = '%u'
