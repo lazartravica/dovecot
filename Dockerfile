@@ -2,6 +2,7 @@ FROM alpine
 
 RUN apk add --update \
      dovecot \
+     dovecot-mysql \
      bash \
  && rm -rf /var/cache/apk/*
 
